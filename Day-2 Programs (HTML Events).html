@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body>
+
+    <b>Enter Your Name :- </b><input type="text" name="fname" id="fname" onblur="myFunction()">
+    <p>When you leave the input field, a function is triggered which transforms the input text to lower case.</p>
+
+    <b>Enter Your Name :- </b><input type="text" name="fname1" id="fname1" onfocus="myFunction1()">
+    <p>A function is triggered when one of the input fields get focus. The function changes the background-color of the
+        input field.</p>
+
+    <button onclick="myFunction3()">Click Me!!!!</button>
+    <p id="demo"></p>
+    <p>A function is triggered when the button is clicked</p>
+
+    <p>A function is triggered when the user is pressing a key in the input field.</p>
+    <input type="text" onkeydown="myFunction4()">
+
+    <p>A function is triggered when the user releases a key in the input field.</p>
+    <input type="text" onkeyup="myFunction5()">
+
+    <img src="image.gif" onerror="myFunction6()">
+
+    <p>A function is triggered if an error occurs when loading the image. The function shows an alert box with a text.
+        In this example we refer to an image that does not exist, therefore the onerror event occurs.</p>
+
+    <button ondblclick="myFunction7()">Double-click me to print the content</button>
+
+    <p id="demo1"></p>
+
+    <p>A function is triggered when the button is double-clicked. The function outputs some text in a p element with
+        id="demo1".</p>
+
+
+    <script>
+        function myFunction() {
+            let result = document.getElementById("fname");
+            result.value = result.value.toLowerCase();
+        }
+        function myFunction1() {
+            document.getElementById("fname1").style.background = "blue";
+        }
+        function myFunction3() {
+            document.getElementById("demo").innerHTML = "<b>Hello World!!!!</b>";
+        }
+        function myFunction4() {
+            alert("You pressed a key inside the input field box");
+        }
+        function myFunction5() {
+            alert("You released a key inside the input field box");
+        }
+        function myFunction6() {
+            alert("The Image could not be loaded");
+        }
+        function myFunction7() {
+            document.getElementById("demo1").innerHTML = "Thanks for Double Click - Hello World!!!!";
+        }
+    </script>
+
+</body>
+
+</html>
