@@ -65,8 +65,8 @@ let nums=[1,2,2,3,4,5,6];
 //use map,filter and reduce method to print the sum of twice of even value
 
 let result=nums.filter(n=>n%2===0).map(n=>n*2).reduce((a,b)=>a+b);
-console.log("Result is :- "+result);
 
+console.log("Result is :- "+result);
 console.log(nums.indexOf(2));
 console.log(nums.lastIndexOf(2));
 console.log(nums.includes(2));
