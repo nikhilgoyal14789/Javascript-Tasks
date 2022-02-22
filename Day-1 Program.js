@@ -63,4 +63,4 @@ let promise4 = new Promise((resolve, reject) => {
     });
   
 Promise.all([promise1, promise2, promise3, promise4])
-        .then((result) => console.log(result));
+        .then((result) =>console.log(result));
